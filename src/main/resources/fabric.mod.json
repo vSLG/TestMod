@@ -2,7 +2,6 @@
   "schemaVersion": 1,
   "id": "testmod",
   "version": "${version}",
-
   "name": "TestMod",
   "description": "TestMod used to test FabricMC features",
   "authors": [
@@ -12,20 +11,17 @@
     "homepage": "https://github.com/vSLG",
     "sources": "https://github.com/vSLG/TestMod"
   },
-
   "license": "LGPL-3.0",
   "icon": "assets/testmod/icon.png",
-
   "environment": "*",
   "entrypoints": {
     "main": [
-      "vslg.testmod.TestMod"
+      "vslg.testmod.common.TestMod"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "testmod.mixins.json"
   ],
-
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
