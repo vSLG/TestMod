@@ -5,6 +5,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import vslg.testmod.common.groups.Ore;
 
 public class ModBlocks {
     public static void registerAll() {
