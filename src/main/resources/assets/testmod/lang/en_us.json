@@ -1,0 +1,11 @@
+{
+    "block.testmod.ruby_block": "Ruby Block",
+    "block.testmod.ruby_ore": "Ruby Ore",
+    "item.testmod.ruby": "Ruby",
+    "item.testmod.ruby_sword": "Ruby Sword",
+    "item.testmod.ruby_pickaxe": "Ruby Pickaxe",
+    "item.testmod.ruby_axe": "Ruby Axe",
+    "item.testmod.ruby_shovel": "Ruby Shovel",
+    "item.testmod.ruby_hoe": "Ruby Hoe",
+    "itemGroup.testmod.items": "TestMod Items"
+}
