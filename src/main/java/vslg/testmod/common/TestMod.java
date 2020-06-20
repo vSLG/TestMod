@@ -24,5 +24,6 @@ public class TestMod implements ModInitializer {
 		System.out.println("Hello Fabric world!");
 		ModBlocks.registerAll();
 		ModItems.registerAll();
+		ModEvents.registerAll();
 	}
 }
