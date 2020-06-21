@@ -14,6 +14,12 @@ import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.util.Lazy;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.gen.GenerationStep;
+import net.minecraft.world.gen.decorator.Decorator;
+import net.minecraft.world.gen.decorator.RangeDecoratorConfig;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.OreFeatureConfig;
 import vslg.testmod.common.block.ModOreBlock;
 import vslg.testmod.common.TestMod;
 
@@ -83,6 +89,20 @@ public enum Ore {
 
     public HoeItem getHoe() {
         return hoe.get();
+    }
+
+    public static void handleBiome(Biome biome) {
+        if (!(biome.getCategory() != Biome.Category.NETHER
+                && biome.getCategory() != Biome.Category.THEEND))
+            return;
+
+        biome.addFeature(GenerationStep.Feature.UNDERGROUND_ORES,
+                Feature.ORE
+                        .configure(new OreFeatureConfig(
+                                OreFeatureConfig.Target.NATURAL_STONE,
+                                Ore.RUBY.getOre().getDefaultState(), 8))
+                        .createDecoratedFeature(Decorator.COUNT_RANGE.configure(
+                                new RangeDecoratorConfig(6, 0, 0, 24))));
     }
 
     public enum ModMaterial implements ToolMaterial {
